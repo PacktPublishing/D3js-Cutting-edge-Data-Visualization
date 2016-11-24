@@ -1,0 +1,56 @@
+
+/* Page */
+
+.body {
+    background-color: #ddd;
+}
+
+#stock-app {
+    padding: 0;
+    border: 0;
+    margin: 5px 20px 50px 20px;
+}
+
+/* Title and Control */
+
+#stock-control {
+    padding: 18px;
+    float: left;
+}
+
+/* Charts */
+.stock-title {
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0E8D94;
+}
+
+.stock-chart {
+    background-color: gray;
+}
+
+.axis path, line{
+    fill: none;
+    stroke: #222;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-size: 11px;
+}
+
+.stock-area {
+    fill: #ddd;
+    stroke: #aaa;
+    stroke-width: 1;
+}
+
+.brush rect {
+    fill: #0E8D94;
+    stroke: #bbb;
+    stroke-width: 0.5;
+    stroke-opacity: 0.4;
+    fill-opacity: 0.2;
+}

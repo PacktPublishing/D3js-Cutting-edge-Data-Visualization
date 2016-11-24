@@ -1,0 +1,158 @@
+/* Typeahead Styles */
+.typeahead, .tt-query, .tt-hint {
+    width: 396px;
+    height: 30px;
+    padding: 8px 12px;
+    font-size: 16px;
+    line-height: 30px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.typeahead {
+    background-color: #fff;
+}
+
+.typeahead:focus {
+  border: 2px solid #41aba3;
+}
+
+.tt-query {
+    -webkit-box-shadow: inset 0 1px 1px #41aba3;
+    -moz-box-shadow: inset 0 1px 1px #41aba3;
+    box-shadow: inset 0 1px 1px #41aba3;
+}
+
+.tt-hint {
+    color: #999
+}
+
+.tt-dropdown-menu {
+    width: 300px;
+    margin-top: 12px;
+    padding: 8px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 5px 10px #41aba3;
+    -moz-box-shadow: 0 5px 10px #41aba3;
+    box-shadow: 0 5px 10px #41aba3;
+}
+
+.tt-suggestion {
+    padding: 3px 20px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #41aba3;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+.gist {
+  font-size: 14px;
+}
+
+
+
+
+/* Axis */
+.axis path, line {
+    fill: none;
+    stroke: #333;
+    shape-rendering: crispEdges;
+}
+/* Style for the xaxis */
+.xaxis {
+  font-size: 11px;
+  font-family: sans-serif;
+  color: #333;
+}
+/* Style for the yaxis */
+.yaxis {
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+/* Chart */
+.chart-background {
+    fill: #ddd;
+}
+
+.trend-path {
+    stroke: #aaa;
+    stroke-width: 1.5;
+    fill: none;
+}
+
+.trend-phantom {
+    fill: none;
+    stroke-opacity: 0;
+    stroke-width: 3;
+}
+
+.trend-highlight {
+    fill: none;
+    stroke-opacity: 1.0;
+    stroke: #41aba3;
+}
+
+.country-summary {
+    margin-top: 10px;
+}
+
+.country-summary-title {
+    color: #00A0B0;
+    font-size: 28pt;
+}
+
+.country-summary-box {
+    color: #00A0B0;
+    margin-top: 10px;
+    font-size: 11pt;
+    font-variant: small-caps;
+}
+
+.country-summary-box-header {
+    border-bottom: solid 4px #00A0B0;
+    color: #00A0B0;
+    font-size: 14px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+.sharing {
+    padding: 10px 10px 5px 10px;
+    margin-top: 30px;
+    vertical-align: top;
+    background-color: #efefef;
+    border: solid 1px #00A0B0;
+}
+
+.sharing-title {
+    color: #00A0B0;
+    font-size: 14px;
+    margin-right: 5px;
+    /*font-weight: bold;*/
+    text-transform: uppercase;
+    vertical-align: top;
+}
+
+.fb-share-button {
+    vertical-align: top;
+}
+
+#comments-section {
+    padding-left: 40px;
+    padding-right: 20px;
+}

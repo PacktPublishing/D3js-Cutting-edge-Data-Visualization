@@ -1,0 +1,28 @@
+{
+  "name": "chirp-client",
+  "version": "0.1.2",
+  "description": "Visualization for Geotagged Tweets",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pnavarrc/chirp-client.git"
+  },
+  "keywords": [
+    "d3",
+    "twitter",
+    "topojson"
+  ],
+  "author": "Pablo Navarro Castillo <pnavarrc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pnavarrc/chirp-client/issues"
+  },
+  "homepage": "https://github.com/pnavarrc/chirp-client",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-connect": "^0.7.1",
+    "grunt-contrib-less": "^0.11.1",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

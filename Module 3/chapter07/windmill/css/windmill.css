@@ -1,0 +1,16 @@
+/* Axis lines */
+.axis path, line {
+    fill: none;
+    stroke: #222222;
+    shape-rendering: crispEdges;
+}
+/* Style for the xaxis */
+.xaxis {
+  font-size: 12px;
+  font-family: sans-serif;
+}
+/* Style for the yaxis */
+.yaxis {
+  font-size: 12px;
+  font-family: sans-serif
+}

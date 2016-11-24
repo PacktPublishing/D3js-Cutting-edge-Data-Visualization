@@ -1,0 +1,23 @@
+.country-summary {
+    margin-top: 10px;
+}
+
+.country-summary-title {
+    color: #00A0B0;
+    font-size: 28pt;
+}
+
+.country-summary-box {
+    color: #00A0B0;
+    margin-top: 10px;
+    font-size: 11pt;
+    font-variant: small-caps;
+}
+
+.country-summary-box-header {
+    border-bottom: solid 4px #00A0B0;
+    color: #00A0B0;
+    font-size: 14px;
+    font-weight: bold;
+    font-variant: small-caps;
+}

@@ -1,0 +1,1 @@
+All the code for the book is hosted on GitHub. We talk about how to clone the repo and switch between branches (which are used to separate the code into chapters) in Chapter 1, Getting Started with D3, ES2016, and Node.js  but you can take a look ahead of time by visiting https://github.com/aendrew/learning-d3 .

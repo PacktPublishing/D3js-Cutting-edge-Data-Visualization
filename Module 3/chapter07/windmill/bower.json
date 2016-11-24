@@ -1,0 +1,27 @@
+{
+  "name": "windmill",
+  "version": "0.3.3",
+  "authors": [
+    "Pablo Navarro Castillo <pnavarrc@gmail.com>"
+  ],
+  "description": "Heatmap Charts",
+  "main": "windmill.js",
+  "keywords": [
+    "chart",
+    "heatmap",
+    "d3"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/_bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.4.1"
+  }
+}

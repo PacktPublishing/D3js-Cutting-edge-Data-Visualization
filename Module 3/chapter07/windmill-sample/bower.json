@@ -1,0 +1,28 @@
+{
+  "name": "windmill-sample",
+  "version": "0.1.2",
+  "authors": [
+    "Pablo Navarro Castillo <pnavarrc@gmail.com>"
+  ],
+  "description": "Sample Web Project",
+  "main": "index.html",
+  "keywords": [
+    "windmill",
+    "d3"
+  ],
+  "license": "MIT",
+  "homepage": "homepage",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/_bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.3",
+    "windmill": "https://github.com/pnavarrc/windmill.git#~0.3.3"
+  }
+}

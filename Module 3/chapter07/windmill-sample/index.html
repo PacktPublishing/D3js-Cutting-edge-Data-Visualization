@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wind Speed</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bower_components/windmill/css/windmill.css" rel="stylesheet">
+
+    <script src="/bower_components/d3/d3.min.js" charset="utf-8"></script>
+    <script src="/bower_components/windmill/windmill.min.js"></script>
+
+  </head>
+  <body>
+
+    <div class="container">
+        <h1>Wind Speed</h1>
+
+        <div id="chart01"></div>
+
+        Average wind speed for each hour of the day and month.
+    </div>
+
+    <script>
+
+        // Aggregation function
+        function average(values) {
+            var sum = 0;
+            values.forEach(function(d) { sum += d; });
+            return sum / values.length;
+        }
+
+        // Matrix Layout
+        var matrix = windmill.layout.matrix()
+            .row(function(d) { return +d.Hour; })
+            .column(function(d) { return +d.Date.getMonth() + 1; })
+            .value(function(d) { return +d.Speed; })
+            .aggregate(average);
+
+        // Create and configure the heatmap chart
+        var heatmap = windmill.chart.heatmap()
+            .column(function(d) { return d.col; })
+            .width(700)
+            .height(350)
+            .colorExtent(['#ccc', '#222']);
+
+        // Load the CSV data
+        d3.csv('/data/wind.csv', function(error, data) {
+
+            // Handle errors getting or parsing the data
+            if (error) { return error; }
+
+            // Parse the dates
+            data.forEach(function(d) { d.Date = new Date(d.Date); });
+
+            // Create the heatmap chart in the container selection
+            d3.select('div#chart01')
+                .data([matrix(data)])
+                .call(heatmap);
+        });
+    </script>
+</body>
+</html>

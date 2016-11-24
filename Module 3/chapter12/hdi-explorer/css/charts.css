@@ -1,0 +1,41 @@
+
+/* Axis */
+.axis path, line {
+    fill: none;
+    stroke: #333;
+    shape-rendering: crispEdges;
+}
+/* Style for the xaxis */
+.xaxis {
+  font-size: 11px;
+  font-family: sans-serif;
+  color: #333;
+}
+/* Style for the yaxis */
+.yaxis {
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+/* Chart */
+.chart-background {
+    fill: #ddd;
+}
+
+.trend-path {
+    stroke: #aaa;
+    stroke-width: 1.5;
+    fill: none;
+}
+
+.trend-phantom {
+    fill: none;
+    stroke-opacity: 0;
+    stroke-width: 3;
+}
+
+.trend-highlight {
+    fill: none;
+    stroke-opacity: 1.0;
+    stroke: #41aba3;
+}

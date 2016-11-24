@@ -1,0 +1,27 @@
+{
+  "name": "chirp-server",
+  "version": "0.2.2",
+  "description": "Twitter Streaming Server",
+  "main": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pnavarrc/chirp-server.git"
+  },
+  "keywords": [
+    "d3",
+    "twitter",
+    "node",
+    "twit"
+  ],
+  "author": "Pablo Navarro Castillo <pnavarrc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pnavarrc/chirp-server/issues"
+  },
+  "homepage": "https://github.com/pnavarrc/chirp-server",
+  "dependencies": {
+    "express": "^4.3.2",
+    "socket.io": "^1.0.2",
+    "twit": "^1.1.15"
+  }
+}

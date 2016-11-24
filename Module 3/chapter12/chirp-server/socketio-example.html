@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Socket.IO Example</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <!-- Socket.IO serves the client-side library  -->
+    <script src="http://localhost:7000/socket.io/socket.io.js"></script>
+    <script src="assets/js/d3.js" charset="utf8"></script>
+  </head>
+
+  <body>
+
+    <style>
+      .client {
+        color: #3465a4;
+        font-style: italic;
+      }
+      .server {
+        color: #73d216;
+        font-style: italic;
+      }
+    </style>
+
+
+    <div class="container">
+
+      <h1>Socket.IO Example</h1>
+
+        <!-- Input element to send messages -->
+        <form role="form" class="form-horizontal" id="msg-form">
+            <div class="form-group">
+                <label for="msgToServer" class="col-sm-1">Message</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control input-sm" id="msgToServer" placeholder="Send a message to the server.">
+                </div>
+                <button type="submit" class="btn btn-default btn-sm">Send</button>
+            </div>
+        </form>
+
+        <!-- List with messages -->
+        <ul id='msg-list' class='list-unstyled'>
+        </ul>
+
+    </div>
+
+
+  <script>
+
+    // Open a connection with the Socket.IO server
+    var socket = io('http://localhost:7000');
+
+    // Declare variables for the message list and the time formatter
+    var messages = [],
+        dateFmt = d3.time.format('[%H:%M:%S]');
+
+    // Update the message list
+    function updateMessages() {
+
+        // Sort the messages, most recent first
+        messages.sort(function(a, b) {
+            return b.date - a.date;
+        });
+
+
+        var li = d3.select('#msg-list')
+            .selectAll('li').data(messages);
+
+        // Append the list elements on enter
+        li.enter().append('li');
+
+        // Update the list class and content.
+        li
+            .attr('class', function(d) { return d.from; })
+            .html(function(d) {
+              return [dateFmt(d.date), d.from, ':', d.msg].join(' ');
+            });
+    }
+
+    d3.select('#msg-form').on('submit', function() {
+
+        var inputElement = d3.select('#message').node(),
+            message = inputElement.value.trim();
+
+        // Check that the message is not empty
+        if (message) {
+            // Sends the message to the server
+            socket.emit('client-message', {msg: message});
+
+            // Append the message to the message list
+            messages.push({from: 'client', date: new Date(), msg: message});
+
+            // Update the list of messages (DOM)
+            updateMessages();
+
+            // Resets the form, clearing the input element
+            this.reset();
+        }
+
+        d3.event.preventDefault();
+    });
+
+    socket.on('server-message', function(data) {
+      messages.push({from: 'server', date: new Date(), msg: data.msg});
+      updateMessages();
+    });
+
+    // The callback will be invoked when the connection establishes
+    socket.on('connect', function() {
+        console.log('Successful connection to the server.');
+    });
+
+  </script>
+
+  </body>
+</html>

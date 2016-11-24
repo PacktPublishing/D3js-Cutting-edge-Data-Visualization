@@ -1,0 +1,16 @@
+# Jekyll Configuration
+safe: true
+markdown: rdiscount
+permalink: pretty
+exclude:
+    - bower_components
+    - node_modules
+    - Gruntfile.js
+    - bower.json
+    - package.json
+    - README.md
+
+# Site
+name: Human Development Index Explorer
+baseurl: http://pnavarrc.github.io/hdi-explorer
+github: http://github.com/pnavarrc/hdi-explorer.git

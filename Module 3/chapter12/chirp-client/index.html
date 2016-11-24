@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Real-Time Twitter Explorer</title>
+
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/css/main.css"/>
+
+    <script charset="utf-8" src="dist/js/dependencies.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Input Element Template -->
+    <script type='text/template' id='topics-template'>
+        <form role="form" class="form-horizontal form-inline" id="topic-form">
+            <div class="form-group">
+                <label for="msgToServer" class="sr-only">Message</label>
+                    <input type="text" class="form-control input-sm" id="new-topic" placeholder="Add a new topic">
+                <button type="submit" class="btn btn-default btn-sm">Send</button>
+            </div>
+        </form>
+    </script>
+
+    <!-- Application Template -->
+    <script type='text/template' id='application-template'>
+        <div class="row header">
+        <!-- Title and about -->
+        <div class="col-md-6">
+          <h1 class="title">chirp explorer</h1>
+          <p class="lead">Exploring geotagged tweets in real-time.</p>
+        </div>
+
+        <!-- Barchart -->
+        <div class="col-md-6">
+          <div id="topics-form"></div>
+          <div id="topics-barchart" class="barchart-block"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div id="topics-map"></div>
+        </div>
+      </div>
+    </script>
+
+    <div class="container" id='application-container'></div>
+
+    <script src="src/charts/charts.js"></script>
+    <script src="src/charts/barchart.js"></script>
+    <script src="src/charts/map.js"></script>
+
+    <script src="src/app/app.js"></script>
+
+
+    <!-- Models -->
+    <script src="src/app/models/topic.js"></script>
+
+    <!-- Collections -->
+    <script src="src/app/collections/topics.js"></script>
+
+    <!-- Views -->
+    <script src="src/app/views/application.js"></script>
+
+    <script src="src/app/views/topics-input.js"></script>
+    <script src="src/app/views/topics-barchart.js"></script>
+    <script src="src/app/views/topics-map.js"></script>
+
+    <script src="src/app/setup.js"></script>
+
+    </body>
+</html>

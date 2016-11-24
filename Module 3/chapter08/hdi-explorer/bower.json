@@ -1,0 +1,32 @@
+{
+  "name": "hdi-explorer",
+  "version": "0.5.6",
+  "authors": [
+    "Pablo Navarro Castillo <pnavarrc@gmail.com>"
+  ],
+  "description": "Human Development Index Explorer",
+  "main": "index.md",
+  "keywords": [
+    "d3",
+    "hdi"
+  ],
+  "license": "MIT",
+  "homepage": "http://pnavarrc.github.io/hdi-explorer",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "d3": "~3.4.1",
+    "bootstrap": "~3.1.0",
+    "backbone": "~1.1.0",
+    "underscore": "~1.5.2",
+    "font-awesome": "~4.0.3",
+    "typeahead.js": "~0.10.0",
+    "firebase": "~1.0.11"
+  }
+}

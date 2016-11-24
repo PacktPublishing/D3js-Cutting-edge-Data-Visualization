@@ -1,0 +1,2 @@
+// Layouts
+windmill.layout = {};

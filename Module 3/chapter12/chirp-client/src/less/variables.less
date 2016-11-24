@@ -1,0 +1,112 @@
+// Variables
+// ---------
+
+// Color Scheme
+@color-sea:  #00A0B0;
+
+// Grayscale
+@color-black:        #000;
+@color-grey-darker:  lighten(@color-black, 12%);
+@color-grey-dark:    lighten(@color-black, 25%);
+@color-grey:         lighten(@color-black, 50%);
+@color-grey-light:   lighten(@color-black, 75%);
+@color-grey-lighter: lighten(@color-black, 97%);
+@color-white:        #fff;
+
+// General
+// -------
+
+// Typography
+@font-family-base: 'Droid Sans', sans-serif;
+@font-size-base:   16px;
+
+@font-size-small:  12px;
+
+// Colors
+@body-bg:       @color-grey-lighter;
+@text-color:    @color-grey-darker;
+@brand-primary: @color-sea;
+
+
+// Page Header
+// -----------
+
+.header {
+
+    border-top:    solid 8px @brand-primary;
+    border-bottom: solid 1px @brand-primary;
+
+    // Title and lead paragraph
+
+    .title {
+        color: @brand-primary;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+
+    .lead {
+        font-size: 16px;
+        color: @color-grey;
+        font-style: italic;
+    }
+}
+
+// Input Form
+// ----------
+
+// Customize Bootstrap variables
+@input-bg:                 @color-grey-lighter;
+@input-bg-disabled:        @color-grey-light;
+
+@input-color:              @color-grey;
+@input-border:             @color-grey-light;
+@input-border-radius:      @border-radius-base;
+@input-border-focus:       @brand-primary;
+@input-color-placeholder:  @color-grey-light;
+
+#topics-form {
+    margin-top: 22px;
+}
+
+// Charts
+// ------
+
+// Map
+// ---
+
+.land {
+    fill: @color-grey-light;
+}
+
+.feature {
+    fill: @color-grey-light;
+}
+
+
+// Barchart
+.barchart-block {
+    height:    85px;
+    margin-top: 5px;
+}
+
+.topics-maps {
+    width: 100%;
+}
+
+// Barchart
+.barchart {
+
+    .barchart-label {
+        font-family: @font-family-base;
+        font-size: @font-size-small;
+        text-transform: uppercase;
+        fill: @color-grey-darker;
+    }
+
+    .barchart-value {
+        font-family: @font-family-base;
+        font-size: @font-size-small;
+        text-transform: uppercase;
+    }
+}
+
